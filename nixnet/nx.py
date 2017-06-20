@@ -3,15 +3,38 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
+class Session(object):
 
-def create_session(
-        database_name,
-        cluster_name,
-        list,
-        interface,
-        mode,
-        session_ref):
-    raise NotImplementedError("Placeholder")
+    def __init__(
+            self,
+            database_name,
+            cluster_name,
+            list,
+            interface,
+            mode):
+        "http://zone.ni.com/reference/en-XX/help/372841N-01/nixnet/nxcreatesession/"
+        # What about http://zone.ni.com/reference/en-XX/help/372841N-01/nixnet/nxcreatesessionbyref/
+        # Store sessionRef as a member variable
+        raise NotImplementedError("Placeholder")
+
+
+    def __exit__(self):
+        "http://zone.ni.com/reference/en-XX/help/372841N-01/nixnet/nxclear/"
+        raise NotImplementedError("Placeholder")
+
+
+    def read_frame(
+            self,
+            timeout):
+        """
+        Valid modes
+        - Frame Input Stream Mode
+        - Frame Input Queued Mode
+        - Frame Input Single-Point Mode
+        Frame: one or more
+        http://zone.ni.com/reference/en-XX/help/372841N-01/nixnet/nxreadframe/
+        """
+        raise NotImplementedError("Placeholder")
 
 
 def create_session_by_ref(
@@ -20,29 +43,6 @@ def create_session_by_ref(
         interface,
         mode,
         session_ref):
-    raise NotImplementedError("Placeholder")
-
-
-def get_property(
-        session_ref,
-        property_id,
-        property_size,
-        property_value):
-    raise NotImplementedError("Placeholder")
-
-
-def get_property_size(
-        session_ref,
-        property_id,
-        property_size):
-    raise NotImplementedError("Placeholder")
-
-
-def set_property(
-        session_ref,
-        property_id,
-        property_size,
-        property_value):
     raise NotImplementedError("Placeholder")
 
 
@@ -69,15 +69,6 @@ def set_sub_property(
         property_id,
         property_size,
         property_value):
-    raise NotImplementedError("Placeholder")
-
-
-def read_frame(
-        session_ref,
-        buffer,
-        size_of_buffer,
-        timeout,
-        number_of_bytes_returned):
     raise NotImplementedError("Placeholder")
 
 
