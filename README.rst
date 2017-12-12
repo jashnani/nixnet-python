@@ -13,7 +13,7 @@ Author       National Instruments
 
 .. image:: https://img.shields.io/pypi/l/nixnet.svg
     :target: https://github.com/ni/nixnet-python/blob/master/LICENSE
-    :alt: License
+    :alt: Licensee
 
 .. image:: https://img.shields.io/pypi/pyversions/nixnet.svg
     :target: https://pypi.python.org/pypi/nixnet
